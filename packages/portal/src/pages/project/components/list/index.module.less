@@ -1,0 +1,71 @@
+.projects{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    .header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+        .search{
+            width: 300px;
+            border-radius: 12%;
+        }
+        .add{
+            position: absolute;
+            right: 48px;
+            top: -58px;
+        }
+    }
+    .empty{
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+        .page-item{
+            background: linear-gradient(180deg, #0000004d, #000000a6);
+            z-index: 1;
+            padding: 20px;
+            display: flex;
+            border-radius: 8px;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 24px;
+            .oper{
+                position: absolute;
+                right: 16px;
+                top: 0px;
+                cursor: pointer;
+            }
+            .name{
+                position: absolute;
+                bottom: 32px;
+                font-size: 32px;
+            }
+            .time{
+                position: absolute;
+                bottom: 16px;
+            }
+            .oper{
+                font-size: 24px;
+            }
+            .icon{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                opacity: 0.2;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}
