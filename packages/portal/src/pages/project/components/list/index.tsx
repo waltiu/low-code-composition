@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { Button, Input, Empty, message } from 'antd';
+import { Button, Input, Empty, message, Dropdown, MenuProps } from 'antd';
 import styles from './index.module.less';
 import { PlusOutlined, SearchOutlined } from '@ant-design/icons';
 import { ProjectItemType, TemplateItemType } from '../../type';
@@ -59,7 +59,19 @@ const ProjectTemplate: FC<ProjectTemplatePropsType> = ({ type }) => {
       setEditorRecord(null)
     }
   }
-
+ const  getRenderItems=(pageItem:any)=>{
+   return [
+      {
+        key: 'preview',
+        label: (
+          <span onClick={(e)=>{
+            window.open(`/preview?id=${pageItem.id}&type=${pageItem.type}`)
+            e.stopPropagation()
+          }}>预览</span>
+        )
+      }
+    ];
+  }
   return (
     <div className={styles.projects}>
       <div className={styles.header}>
@@ -87,7 +99,15 @@ const ProjectTemplate: FC<ProjectTemplatePropsType> = ({ type }) => {
               onClick={() => setEditorRecord(pageItem)}
               className={styles['page-item']}
             >
-              <div className={styles.oper}>...</div>
+              <div className={styles.oper}>
+                <Dropdown menu={{
+                  items:getRenderItems(pageItem)
+                }} placement="bottomLeft" arrow>
+                  <span onClick={(e)=>e.stopPropagation()}>
+                    ...
+                  </span>
+                </Dropdown>
+              </div>
               <div className={styles.name}>{pageItem.name}</div>
               <img src={pageItem.icon || Logo} className={styles.icon} />
               <div className={styles.time}>{pageItem.updateTime}</div>
