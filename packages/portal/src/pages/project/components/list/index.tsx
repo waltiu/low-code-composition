@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { Button, Input, Empty, message, Dropdown, MenuProps } from 'antd';
+import { Button, Input, Empty, message, Dropdown } from 'antd';
 import styles from './index.module.less';
 import { PlusOutlined, SearchOutlined } from '@ant-design/icons';
 import { ProjectItemType, TemplateItemType } from '../../type';
