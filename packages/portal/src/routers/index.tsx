@@ -1,6 +1,6 @@
 
 import Login from '@/pages/login'
-import Designer from '@/pages/designer'
+import Designer from '@/models/designer'
 import Preview from '@/pages/preview'
 import Layouts from '@/layouts'
 import Project from '@/pages/project'

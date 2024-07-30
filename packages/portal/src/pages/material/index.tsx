@@ -8,7 +8,7 @@ import { Button, message } from "antd"
 import { generateUUID } from "@/utils"
 import { useState } from "react"
 import Edit from "./Edit"
-import EditorModal from "../components/EditorModal"
+import EditorModal from "@/components/EditorModal"
 
 const Material = () => {
     const [templates, setTemplates] = useTemplates()

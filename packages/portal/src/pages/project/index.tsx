@@ -8,7 +8,6 @@ import {
   getProjectTypes,
 } from './constant';
 import { useState } from 'react';
-import Site from './sites';
 import List from './components/list'
 import styles from './index.module.less'
 import PageWrapper from '@/layouts/pageWrapper';
@@ -30,7 +29,7 @@ const Project = () => {
           {(projectType === PROJECT_TYPE_PAGE
             || projectType === PROJECT_TYPE_EXCEL
             || projectType === PROJECT_TYPE_FLOW || projectType === PROJECT_TYPE_BI) && <List type={projectType} />}
-          {projectType === PROJECT_TYPE_SITE && <Site />}
+
         </div>
 
       </div>

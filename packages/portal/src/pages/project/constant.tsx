@@ -38,11 +38,6 @@ export const getProjectTypes = () => {
       title:"大屏",
       icon:<FileTextOutlined />,
       key: PROJECT_TYPE_BI,
-    },
-    {
-      label: "快速建站",
-      icon:<WindowsOutlined />,
-      key: PROJECT_TYPE_SITE,
-    },
+    }
   ]
 };

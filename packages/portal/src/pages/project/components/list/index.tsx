@@ -8,7 +8,7 @@ import { generateUUID } from '@/utils';
 import useProject from '../../../../hooks/useProject';
 import Logo from '@/layouts/logo.png';
 import { getProjectInfoByType } from '../../constant';
-import EditorModal from '@/pages/components/EditorModal';
+import EditorModal from '@/components/EditorModal';
 
 type ProjectTemplatePropsType = {
   type: string

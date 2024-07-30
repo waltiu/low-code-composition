@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import EditorConstructor from "../components/EditorConstructor";
+import EditorConstructor from "@/components/EditorConstructor";
 import { getUrlParams } from "@/utils";
 
 const PreWrapper = () => {
