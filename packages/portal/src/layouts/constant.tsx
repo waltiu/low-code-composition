@@ -22,7 +22,7 @@ const getItem = (
 export const getMenus = () => {
   return [
     getItem('项目管理', '/project', <PieChartOutlined />),
-    getItem('物料管理', '/material', <DesktopOutlined />),
+    getItem('模板管理', '/material', <DesktopOutlined />),
 
   ];
 };

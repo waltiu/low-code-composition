@@ -1,4 +1,5 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
+import './webCom'
 
 const Designer = forwardRef((props, ref) => {
   const editorRef = useRef<any>()
