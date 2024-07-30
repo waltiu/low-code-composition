@@ -1,5 +1,5 @@
 import { FC, forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react"
-import { construtorMap } from "./constant"
+import { constructorMap } from "./constant"
 
 type EditorConstructorProps = {
     type: string,
@@ -14,8 +14,8 @@ const EditorConstructor: FC<EditorConstructorProps> = forwardRef(({ type, id }, 
     const [data, setData] = useState()
     const editorRef = useRef<any>()
     const getConstrutor = (type: string, data: any) => {
-        const { com: Compoment } = construtorMap[type]
-        return <Compoment value={data} ref={editorRef} />
+        const { com: Component } = constructorMap[type]
+        return <Component value={data} ref={editorRef} />
     }
     useImperativeHandle(ref, () => ({
         // 这里暴露的方法和属性可以由父组件访问
@@ -29,7 +29,7 @@ const EditorConstructor: FC<EditorConstructorProps> = forwardRef(({ type, id }, 
         if (!type) {
             return {}
         }
-        const { getData } = construtorMap[type]
+        const { getData } = constructorMap[type]
         const result = await getData(id)
         setData(result)
     }

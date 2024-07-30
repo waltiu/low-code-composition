@@ -7,18 +7,19 @@ import Designer from "@/models/designer"
 import Flow from "@/models/flow"
 import Bi from "@/models/bi"
 
-type ConstrutorMapType = {
+type ConstructorMapType = {
     [key: string]: any
 }
 
 
 
 
-export const construtorMap: ConstrutorMapType = {
+export const constructorMap: ConstructorMapType = {
     [PROJECT_TYPE_EXCEL]: {
         com: Excel,
         getData: (id: string) => {
             const result = getCacheProjectData(PROJECT_TYPE_EXCEL, id) || getCacheTemplateData(PROJECT_TYPE_EXCEL, id)
+            console.log(result, 'PROJECT_TYPE_EXCEL')
             return result?.schema?.data || [{ name: "新增1" }]
         }
     },

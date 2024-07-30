@@ -12,7 +12,6 @@
   "dependencies": {
     "@ant-design/icons": "^5.3.6",
     "@micro-zoe/micro-app": "1.0.0-rc.5",
-    "@packages/cores": "workspace:^",
     "@packages/editor": "workspace:^",
     "@packages/excel": "workspace:^",
     "@packages/utils": "workspace:^",

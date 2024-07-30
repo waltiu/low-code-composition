@@ -23,7 +23,6 @@ const EditorModal: FC<EditPropsType> = ({ editRecord, onSave }) => {
             return
         }
         const data = await editorRef.current.getData()
-        console.log(data,'onOk-data')
         onSave({
             ...editRecord,
             schema: {

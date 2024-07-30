@@ -1,7 +1,6 @@
-import { FileTextOutlined, ProjectOutlined, WindowsOutlined } from '@ant-design/icons';
+import { FileTextOutlined, ProjectOutlined } from '@ant-design/icons';
 
 export const PROJECT_TYPE_PAGE = '1'; // 页面
-export const PROJECT_TYPE_SITE = '2'; // 站点
 export const PROJECT_TYPE_FLOW = '4'; // 流程图
 export const PROJECT_TYPE_BI = '5'; // bi大屏
 export const PROJECT_TYPE_EXCEL = '3'; // 报表

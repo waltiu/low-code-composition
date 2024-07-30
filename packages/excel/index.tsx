@@ -13,20 +13,20 @@ const Excel = forwardRef(({ value }: ExcelPropsType, ref) => {
         getRef: () => {
             return excelRef?.current
         },
-        getData:async ()=>{
-            const data = await excelRef?.current?.getAllSheets()||[]
+        getData: async () => {
+            const data = await excelRef?.current?.getAllSheets() || []
             return data.map((item: any) => ({
                 ...item,
                 celldata: excelRef?.current?.dataToCelldata(item.data)
             }))
         },
-        setData:()=>{
+        setData: () => {
 
         }
     }));
     return (
         <div style={{ height: "100%", width: "100%" }}>
-            {value&&<Workbook ref={excelRef} data={Array.isArray(value) ? value : [value] || [{}]} />}
+            {value && <Workbook ref={excelRef} data={Array.isArray(value) ? value : [value] || [{}]} />}
         </div>
     )
 })
