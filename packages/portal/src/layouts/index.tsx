@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { Layout, Menu } from 'antd';
 import { MenuItem, getMenus } from './constant';
 import Logo from './logo.png';
 import styles from './index.module.less';
-import { Outlet,useNavigate  } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const { Header, Content, Sider } = Layout;
 
@@ -13,7 +13,11 @@ const LayoutConatiner: React.FC = () => {
     navigate(menu?.key as string);
   };
   const menusItems = getMenus();
-
+  useEffect(() => {
+    if (window.location.pathname === '/') {
+      window.location.href = "/project"
+    }
+  }, [])
   return (
     <Layout className={styles.layout}>
       <Header style={{ display: 'flex', alignItems: 'center' }}>
@@ -33,7 +37,7 @@ const LayoutConatiner: React.FC = () => {
         </Sider>
         <Layout>
           <Content className={styles["outlet-container"]}>
-              <Outlet />
+            <Outlet />
           </Content>
         </Layout>
       </Layout>
